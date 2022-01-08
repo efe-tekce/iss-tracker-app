@@ -29,7 +29,7 @@ const PeopleInSpace = () => {
   }, []);
 
   return (
-    <div className="container min-h-screen min-w-full   flex justify-center items-center bg-gradient-to-br from-cyan-300 to-indigo-500">
+    <div className="container min-h-screen min-w-full   flex justify-center items-center bg-[url('./Starman.svg')] bg-no-repeat bg-center bg-contain">
       <BeatLoader
         color="teal"
         loading={isLoading}
@@ -37,12 +37,12 @@ const PeopleInSpace = () => {
         className="text-center"
       />
       {!isLoading && (
-        <div className="peopleInSpace flex flex-col text-center font-bold text-slate-500 ">
+        <div className="peopleInSpace flex flex-col text-center font-bold text-slate-300 ">
           {people.map((person, index) => (
             <a
               key={person.name}
               href={`https://en.wikipedia.org/wiki/${person.name}`}
-              className="names p-4 bg-teal-300 m-4 rounded-lg hover:scale-110 transition duration-300"
+              className="names p-4 bg-fuchsia-400 m-4 rounded-lg hover:scale-110 transition duration-300 opacity-70"
               target="_blank"
               rel="noreferrer"
             >

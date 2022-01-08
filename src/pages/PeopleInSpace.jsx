@@ -29,22 +29,26 @@ const PeopleInSpace = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="astronauts"></div>
-      <BeatLoader color="green" loading={isLoading} size={200} />
+    <div className="container min-h-screen min-w-full   flex justify-center items-center bg-gradient-to-br from-cyan-300 to-indigo-500">
+      <BeatLoader
+        color="teal"
+        loading={isLoading}
+        size={100}
+        className="text-center"
+      />
       {!isLoading && (
-        <div className="peopleInSpace">
+        <div className="peopleInSpace flex flex-col text-center font-bold text-slate-500 ">
           {people.map((person, index) => (
             <a
               key={person.name}
               href={`https://en.wikipedia.org/wiki/${person.name}`}
-              className="names"
+              className="names p-4 bg-teal-300 m-4 rounded-lg hover:scale-110 transition duration-300"
               target="_blank"
               rel="noreferrer"
             >
-              <p>
+              <span>
                 {person.name} <br /> Craft: {person.craft}
-              </p>
+              </span>
             </a>
           ))}
         </div>

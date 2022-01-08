@@ -35,8 +35,13 @@ const Tracker = () => {
   }, []);
 
   return (
-    <div>
-      <BeatLoader color="green" loading={isLoading} size={200} />
+    <div className="map-div min-h-screen min-w-full">
+      <BeatLoader
+        color="teal"
+        loading={isLoading}
+        size={100}
+        className="text-center"
+      />
       {!isLoading && <Map coordinates={coordinates} />}
     </div>
   );

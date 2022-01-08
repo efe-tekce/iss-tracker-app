@@ -3,14 +3,15 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 const Map = ({ coordinates }) => {
   return (
-    <div>
+    <div className="">
       <MapContainer
         style={{ height: "100vh", width: "100vw" }}
         center={coordinates}
-        zoom={10}
+        zoom={8}
         scrollWheelZoom={true}
         dragging={true}
         minZoom={1.75}
+        className="min-w-full min-h-screen"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright%22%3EOpenStreetMap</a> contributors'
